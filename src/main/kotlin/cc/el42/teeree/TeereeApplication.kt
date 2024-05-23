@@ -11,6 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 @ComponentScan(basePackages = ["cc.el42.teeree.services"])
 @ComponentScan(basePackages = ["cc.el42.teeree.controllers"])
 @ComponentScan(basePackages = ["cc.el42.teeree.interceptors"])
+@ComponentScan(basePackages = ["cc.el42.teeree.components"])
 @EnableJpaRepositories(basePackages = ["cc.el42.teeree.repositories"])
 @EntityScan(basePackages = ["cc.el42.teeree.entities"])
 @EnableCaching
