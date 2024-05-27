@@ -1,5 +1,6 @@
 package cc.el42.teeree.entities
 
+import cc.el42.teeree.dto.UserDto
 import jakarta.persistence.*
 
 @Entity
@@ -15,6 +16,9 @@ class User(
     @Column(nullable = false)
     val password: String,
 
+    @OneToMany(mappedBy = "user")
+    val cookies: List<Cookie>,
+
     @Enumerated(EnumType.STRING)
     val role: Role
 ) {
@@ -25,5 +29,3 @@ class User(
         STUDENT(1),
     }
 }
-
-data class UserDto(val email: String, val role: User.Role)
